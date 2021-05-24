@@ -1,11 +1,9 @@
 var express = require('express');
 
 var app = express();
-var http = require('http');
 var handlebars = require('express-handlebars')
 var bodyParser = require('body-parser');
 var fs = require('fs')
-var createError = require('http-errors');
 var path = require('path');
 
 app.use(express.static(path.resolve('./public')));
@@ -112,7 +110,7 @@ app.use(function(req,res){
 });
 
 //error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
