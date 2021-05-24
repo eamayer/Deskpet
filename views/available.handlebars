@@ -1,0 +1,59 @@
+
+<!--Filter for breed and Search-->
+<div class="row" style="background:transparent url('/images/availablepetback.png') no-repeat center center /cover">
+    <div class="row mb-3">
+        <h2>Filter Search</h2>
+    </div>
+        <div class="row mx-5">
+        <h3>Breed</h3>
+        <form action ="/available" method="get">
+            <div class="availablePetSelect">
+                <input type="radio" name="pickBreed" id="giraffe"  value="giraffe" />
+                <label for="giraffe"><img src="/images/giraffe.png" alt="giraffe"></label>
+
+                <input type="radio" name="pickBreed" id="panda"  value="panda"/>
+                <label for="panda"><img src="/images/panda.png" alt="panda"></label>
+
+                <input type="radio" name="pickBreed" id="unicorn" value="unicorn" />
+                <label for="unicorn"><img src="/images/unicorn.png" alt="unicorn"></label>
+
+                <input type="radio" name="pickBreed" id="spider" value="spider"/>
+                <label for="spider"><img src="/images/spider.png" alt="spider"></label>
+
+                <input type="radio" name="pickBreed" id="brontosaurus" class="input-hidden" value="brontosaurus"/>
+                <label for="brontosaurus"><img src="/images/dino.png" alt="brontosaurus"></label>
+
+                <input type="radio" name="pickBreed" id="puppy" class="input-hidden" value="puppy"/>
+                <label for="puppy"><img src="/images/puppy.png" alt="puppy"></label>
+
+                <input type='submit' class="btn btn-primary" id="availableSubmit" value="filter">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Creates the cards for all the available pets. Has name, breed, picture and carelevel-->
+<div class="slide container">
+    <div class="row">
+    <h2 style="color: #574BE2">Available Pets</h2>
+    </div>
+    <div class="row">
+        {{#each list}}
+        <div class="col-sm-4">
+            <form action ="/learnMore" method="GET">
+                <div class="card h-100 rounded mb-5 shadow-sm p-3 mb-5 bg-white rounded">
+                    <img src="images/{{this.name}}.png" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title">{{this.name}}</h2>
+                            <p>care level: {{this.careLevel}}</p>
+                            <p>breed: {{this.breed}}</p>
+                        <button type='submit' class="btn btn-primary stretched-link hidden" name="about" value={{this.name}}></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+

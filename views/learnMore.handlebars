@@ -1,0 +1,22 @@
+
+<!--Learn more about each animal-->
+<div class="container-fluid" style="background:transparent url('images/petadoptionback.png') center">
+    <div class="row">
+        <div class="card mx-auto my-5" style="width: 50%;">
+        <img class="card-img-top center" style= "width: 50%" src="images/{{animalName}}.png" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title centered-text">hi I'm {{animalName}}!</h2>
+                    <p class="card-text">I will bring sunshine, sprinkles and rainbows while you work but I do need a lot of attention.
+                    I am the perfect companion for those who need to take breaks at least once an hour. I do get a little fussy at times,
+                    but you will not regret the cuteness overload. My parents are strong and truly magical. Therefore, if I am well taken care of,
+                    I will grow up to become a strong magical unicorn. This means I can take you riding to the most epic places all over the world
+                    and so much more magical surprises!</p>
+
+                <form action ="/adoptPageAnimalPicked" method="GET">
+                    <button type='submit' class="btn btn-primary stretched-link centered" name="about" value={{animalName}}>Adopt Me</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>

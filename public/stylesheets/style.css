@@ -1,0 +1,175 @@
+/*fonts*/
+.gamja {
+  font-family: "Gamja Flower", cursive;
+  color: #574BE2;
+  opacity: 1;
+}
+
+.baloo {
+  font-family: 'Baloo 2', cursive;;
+  font-weight: bold;
+  color: #574BE2;
+  opacity: 1;
+}
+
+/*standard styling used throughout*/
+
+p {
+  font-family: 'Baloo 2', cursive;;
+  font-weight: bold;
+  font-size: large;
+  color: #574BE2;
+  opacity: 1;
+  text-align: left;
+}
+
+div {
+  font-family: 'Baloo 2', cursive;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/*centering elements used throughout*/
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+/*navigation bar styling*/
+.navbar {
+  line-height: 1.5;
+  font-family: 'Baloo 2', cursive;
+}
+
+.navbar li a {
+  color: #1a1e21
+}
+
+.navbar-nav li a:hover {
+  color: #f4511e
+}
+
+/*Adopt Page: Scroll bar*/
+.scrollable > .row {
+  position: absolute;
+  height: 150px;
+  width: 50%;
+  overflow-y: scroll;
+}
+
+/*Stylized the scrollbar on the Adopt Page*/
+::-webkit-scrollbar{
+  width: 10px
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Front Page Carousal */
+#featuredPets{
+  margin-bottom: 0%;
+}
+
+#carousel{
+  margin:0 auto;
+  z-index: 0;
+  position: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: aquamarine;
+}
+
+.centered image {
+  width: 50%;
+}
+
+/*Available Page: makes radio buttons disappear and to have red outline when checked*/
+.availablePetSelect input[type="radio"]{
+  opacity: 0;
+}
+
+.availablePetSelect input[type="radio"]:checked + label {
+  border: 1px solid red;
+}
+
+/*Available Page: Pet Select Bar background*/
+#intro{
+  background-image: url('images/availablepetback.png');
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+/*Available Page & Learn More Page: card border change when hover*/
+.card:hover {
+  border:5px solid #FF9C66;
+}
+/*Successful Page: makes unordered list horizontal*/
+ul {
+  text-align: center; }
+
+ul li {
+  display: inline-block; }
+
+/*Form-styling*/
+.form-group-gamja2 {
+  font-family: "Gamja Flower", cursive;
+  color: #425B70
+}
+
+.centerform {
+  display: block;
+  margin: 5% auto 10%;
+  width: 50%;
+  position: center;
+}

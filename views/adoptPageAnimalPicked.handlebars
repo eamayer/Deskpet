@@ -1,0 +1,17 @@
+<!--Used when animal is picked through available animal workflow-->
+<div class="container-fluid">
+    <div class = "centerform" style="margin-left: 25%; align-content:center; width: 50%; background-color: white"  >
+        <h1 class="centered-text baloo"> Congrats! You are adopting {{animalName}}</h1>
+        <h1 class="centered-text gamja">We just a little bit of info:</h1>
+        <img src="../images/{{animalName}}.png" class="center-image" alt="...">
+
+        <form method="post">
+            {{>adoptPageForm}}
+        </form>
+
+        <div>
+            {{>termsAndConditions}}
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
