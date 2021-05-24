@@ -27,12 +27,12 @@ function Pet(name, breed, careLevel, careLevelNumeric, gender) {
 }
 
 var Pets = [
-  new Pet("molly", "giraffe", "moderate", 1, "female"),
-  new Pet("goony", "panda", "low", 2, "female"),
-  new Pet("lolli", "unicorn", "very high", 3, "female"),
-  new Pet("zack", "puppy", "high", 2,"male"),
-  new Pet("yammy", "spider", "very low", 2,"male"),
-  new Pet("sally", "brontosaurus", "high", 3, "female")]
+  new Pet("Molly", "giraffe", "moderate", 1, "female"),
+  new Pet("Goony", "panda", "low", 2, "female"),
+  new Pet("Lolli", "unicorn", "very high", 3, "female"),
+  new Pet("Zack", "puppy", "high", 2,"male"),
+  new Pet("Yammy", "spider", "very low", 2,"male"),
+  new Pet("Sally", "brontosaurus", "high", 3, "female")]
 
 let data = JSON.stringify(Pets)
 fs.writeFileSync('animals.json', data)
