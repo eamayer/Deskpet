@@ -45,7 +45,7 @@ fs.writeFileSync('animals.json', data)
 //     console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 // });
 
-const port = 3000;
+const port = process.env.PORT || 3001;
 app.get('/',function(req,res){
     res.render('index')
 });
@@ -79,7 +79,6 @@ app.get('/adoptPageAnimalPicked', function (req,res) {
     context.animalName = req.query.about;
     console.log(context.animalName)
     res.render('adoptPageAnimalPicked', context)
-
 })
 
 // After user has completed the adopt page, will go to successful page that is customized for animal adopted and first Name
