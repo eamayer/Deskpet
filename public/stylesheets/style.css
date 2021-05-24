@@ -1,12 +1,12 @@
 /*fonts*/
 .gamja {
-  font-family: "Gamja Flower", cursive;
+  font-family: "Gamja Flower", serif;
   color: #574BE2;
   opacity: 1;
 }
 
 .baloo {
-  font-family: 'Baloo 2', cursive;;
+  font-family: 'Baloo 2', cursive;
   font-weight: bold;
   color: #574BE2;
   opacity: 1;
@@ -154,6 +154,18 @@ div {
 .card:hover {
   border:5px solid #FF9C66;
 }
+.card-img-top{
+  max-height: 100%;
+  max-width: 100%;
+  display: block
+}
+
+/*.box {*/
+/*  width: auto;*/
+/*}*/
+/*.image.box {*/
+/*  max-height: 200px*/
+/*}*/
 /*Successful Page: makes unordered list horizontal*/
 ul {
   text-align: center; }
