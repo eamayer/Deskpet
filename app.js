@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+
 
 
 //Creates the JSON File for easy use from other pages
@@ -51,8 +51,6 @@ app.get('/',function(req,res){
 });
 
 app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
-
-module.exports = app;
 
 // When filtered on available page, only animals of chosen breed will be shown. Loads to same page.
 app.get('/available', function(req, res){
