@@ -1,7 +1,7 @@
 var express = require('express');
 
 var app = express();
-
+var http = require('http');
 var handlebars = require('express-handlebars').create({defaultLayout:'default'});
 var bodyParser = require('body-parser');
 var fs = require('fs')
@@ -39,15 +39,20 @@ var Pets = [
 let data = JSON.stringify(Pets)
 fs.writeFileSync('animals.json', data)
 
-app.set('port', 3000);
+// app.set('port', 3000);
+//
+// app.listen(app.get('port'), function(){
+//     console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
+// });
 
-app.listen(app.get('port'), function(){
-    console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
-});
-//Home Page
+const port = 3000;
 app.get('/',function(req,res){
-  res.render('index')
+    res.render('index')
 });
+
+app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
+
+module.exports = app;
 
 // When filtered on available page, only animals of chosen breed will be shown. Loads to same page.
 app.get('/available', function(req, res){
