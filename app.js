@@ -41,7 +41,7 @@ fs.writeFileSync('animals.json', data)
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-    port = 8000;
+    port = 3000;
     console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 }
 
