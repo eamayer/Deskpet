@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express();
 var http = require('http');
-var handlebars = require('express-handlebars').create({defaultLayout:'default'});
+var handlebars = require('express-handlebars')
 var bodyParser = require('body-parser');
 var fs = require('fs')
 var createError = require('http-errors');
@@ -14,7 +14,7 @@ app.use(express.static(path.resolve('./public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.engine('handlebars', handlebars.engine);
+app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 
 
