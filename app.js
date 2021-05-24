@@ -39,15 +39,11 @@ var Pets = [
 let data = JSON.stringify(Pets)
 fs.writeFileSync('animals.json', data)
 
-const http = require('http');
-const port = process.env.PORT || 3000
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    res.send('/')
-});
-
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+    console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
+}
 
 //Home Page
 app.get('/',function(req,res){
@@ -124,4 +120,5 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
 
