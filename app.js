@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+
 
 
 //Creates the JSON File for easy use from other pages
