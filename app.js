@@ -48,7 +48,7 @@ app.get('/',function(req,res){
     res.render('index')
 });
 
-app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
+app.listen(port, () => console.log(`working on ${port}!`));
 
 // When filtered on available page, only animals of chosen breed will be shown. Loads to same page.
 app.get('/available', function(req, res){
